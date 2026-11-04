@@ -1,0 +1,15 @@
+E-Waste Classification — Evaluation Report
+==================================================
+
+               precision    recall  f1-score   support
+
+      battery     1.0000    1.0000    1.0000         4
+charger_cable     0.7778    1.0000    0.8750         7
+circuit_board     1.0000    1.0000    1.0000         5
+       laptop     0.8571    0.8571    0.8571         7
+ mobile_phone     0.8333    1.0000    0.9091         5
+   monitor_tv     1.0000    0.6250    0.7692         8
+
+     accuracy                         0.8889        36
+    macro avg     0.9114    0.9137    0.9017        36
+ weighted avg     0.9059    0.8889    0.8840        36

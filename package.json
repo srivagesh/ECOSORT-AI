@@ -1,0 +1,14 @@
+{
+  "name": "e-waste-project-root",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix frontend_upload/frontend run dev",
+    "build": "npm --prefix frontend_upload/frontend run build",
+    "backend": "run_backend.bat"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "three": "^0.186.1"
+  }
+}

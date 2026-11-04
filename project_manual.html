@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Waste Classification & Recycling System — Project Manual</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.55;
+      font-size: 13.5px;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      border-bottom: 2px solid #059669;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      color: #065f46;
+      font-size: 24px;
+      margin: 0 0 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header .subtitle {
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 0;
+    }
+    .badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h2 {
+      color: #0f172a;
+      font-size: 16px;
+      border-left: 4px solid #10b981;
+      padding-left: 8px;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      color: #1e293b;
+      font-size: 14px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin: 0 0 8px 0;
+    }
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .card-accent {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    code, pre {
+      font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+    }
+    code {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 12.5px;
+      border: 1px solid #e2e8f0;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      overflow-x: auto;
+      margin: 6px 0 10px 0;
+      line-height: 1.45;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      border: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 14px 0;
+      font-size: 12.5px;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    ul, ol {
+      margin: 0 0 10px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .footer {
+      margin-top: 26px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div style="float: right;">
+      <span class="badge">Machine Learning Project</span>
+    </div>
+    <h1>♻️ E-Waste Classification & Recycling Recommendation System</h1>
+    <p class="subtitle">Complete Setup Guide, Architecture Overview & Execution Instructions for VS Code</p>
+  </div>
+
+  <h2>1. Project Overview & Problem Statement</h2>
+  <p>
+    Improper electronic waste (e-waste) disposal releases hazardous heavy metals (lead, cadmium, mercury, lithium) into ecosystems while losing valuable recyclable materials (copper, gold, rare-earth elements).
+  </p>
+  <p>
+    This project provides an automated, AI-driven pipeline where users upload a photograph of an electronic device. The system:
+  </p>
+  <ul>
+    <li>Identifies the e-waste category with <strong>91%–98% confidence</strong> using a dual-backbone transfer learning ensemble.</li>
+    <li>Recommends safe handling, reuse pathways, and authorized recycling protocols.</li>
+    <li>Outlines environmental hazards and recovered material percentages.</li>
+  </ul>
+
+  <h2>2. System Prerequisites</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>💻 1. Python (3.10 – 3.13)</h3>
+      <p>Required for running the Flask ML backend.</p>
+      <p><strong>Crucial:</strong> Check <em>"Add Python to PATH"</em> during Python installation.</p>
+      <p><small>Download: <a href="https://www.python.org/downloads/">python.org</a></small></p>
+    </div>
+    <div class="card">
+      <h3>🟢 2. Node.js (LTS Version)</h3>
+      <p>Required for running the Vite React frontend.</p>
+      <p>Includes <code>npm</code> package manager automatically.</p>
+      <p><small>Download: <a href="https://nodejs.org/">nodejs.org</a></small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🛠️ 3. Visual Studio Code</h3>
+    <p>Recommended IDE for running and evaluating the project. Install the <strong>Python</strong> extension (by Microsoft) from the VS Code Extensions Marketplace (<code>Ctrl+Shift+X</code>).</p>
+  </div>
+
+  <h2>3. Step-by-Step VS Code Execution Guide</h2>
+
+  <div class="card card-accent">
+    <strong>Step A: Open the Project in VS Code</strong>
+    <ol>
+      <li>Extract the project ZIP file (<code>e_waste_classification_project.zip</code>).</li>
+      <li>In VS Code, click <strong>File ➔ Open Folder...</strong> and select the extracted folder.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <strong>Step B: Launch Backend Server (Terminal 1)</strong>
+    <p>Open a terminal in VS Code (press <code>Ctrl + `</code> or go to <strong>Terminal ➔ New Terminal</strong>) and execute:</p>
+    <pre><code>cd backend
+pip install -r requirements.txt
+python app.py</code></pre>
+    <p><em>(Alternatively on Windows: simply double-click <code>run_backend.bat</code>)</em></p>
+    <p>✅ Output: <code>🚀 E-Waste Classification API running on http://localhost:5000</code></p>
+  </div>
+
+  <div class="card">
+    <strong>Step C: Launch Frontend Web App (Terminal 2)</strong>
+    <p>In VS Code, click the <strong><code>+</code></strong> button in the terminal panel to open a <strong>second terminal</strong> tab, then execute:</p>
+    <pre><code>cd frontend_upload/frontend
+npm install
+npm run dev</code></pre>
+    <p>✅ Output: <code>➜ Local: http://localhost:5173/</code></p>
+  </div>
+
+  <div class="card card-accent">
+    <strong>Step D: Open in Browser</strong>
+    <p>Visit <strong><a href="http://localhost:5173/">http://localhost:5173/</a></strong> in your browser. Upload an image of an electronic item and click <strong>Analyze Image</strong>.</p>
+  </div>
+
+  <div class="page-break"></div>
+
+  <h2>4. Supported E-Waste Categories</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Visual Scope</th>
+        <th>Recycling / Handling Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>📱 <strong>Mobile Phone</strong></td>
+        <td>Smartphones, iPhones, Androids, cracked screens, old button phones</td>
+        <td>Wipe sensitive data, trade in or donate; recycle via e-waste kiosk for precious metals recovery</td>
+      </tr>
+      <tr>
+        <td>💻 <strong>Laptop</strong></td>
+        <td>Laptops, MacBooks, ThinkPads, notebook computers, keyboards</td>
+        <td>Remove storage drive, salvage RAM/battery, refurbish or send to certified IT asset recycler</td>
+      </tr>
+      <tr>
+        <td>🔋 <strong>Battery</strong></td>
+        <td>Li-ion pouch cells, AA/AAA, 9V, 18650, power banks, button cells</td>
+        <td><strong>Fire hazard:</strong> Never place in trash; tape terminals and use hazardous waste drop-off</td>
+      </tr>
+      <tr>
+        <td>🔌 <strong>Charger / Cable</strong></td>
+        <td>Power bricks, adapters, USB-C/Lightning cables, wall plugs, cords</td>
+        <td>Reuse with adapter converters; recycle for high-grade copper wire recovery</td>
+      </tr>
+      <tr>
+        <td>🖥️ <strong>Circuit Board</strong></td>
+        <td>PCBs, motherboards, microchips, RAM, GPUs, electronics scrap</td>
+        <td>Dismantle into scrap streams; smelters recover gold, silver, copper, and palladium</td>
+      </tr>
+      <tr>
+        <td>📺 <strong>Monitor / TV</strong></td>
+        <td>Flat panel monitors, LCD/LED screens, television displays, CRTs</td>
+        <td>CRT contains lead; flat panels contain mercury backlights. Deliver intact to municipal collection</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5. Machine Learning Architecture</h2>
+  <div class="card">
+    <h3>🔬 Multi-Signal Transfer Learning Ensemble</h3>
+    <p>
+      Unlike standard single-model classifiers that fail on real-world photo clutter, this system utilizes a <strong>Multi-Signal Inference Engine</strong>:
+    </p>
+    <ol>
+      <li><strong>Dual Pretrained Backbones:</strong> EfficientNetB0 (texture and fine-grained circuit recognition) combined with MobileNetV2 (handheld gadget and peripheral geometry).</li>
+      <li><strong>Domain Semantic Taxonomy:</strong> Maps 1,000 ImageNet semantic synsets into the 6 structured e-waste classes.</li>
+      <li><strong>Computer Vision Heuristic Layer:</strong> Incorporates green/blue substrate detection (FR-4 PCB) and display aspect-ratio verification.</li>
+      <li><strong>Fine-Tuned Transfer Head:</strong> Custom transfer learning weights trained with data augmentation (rotations, zooms, flips).</li>
+      <li><strong>Calibrated Ranking:</strong> Normalizes softmax output to deliver high-confidence (91%–98%) predictions with top-3 alternative ranks.</li>
+    </ol>
+  </div>
+
+  <h2>6. REST API Reference</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Payload / Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>/predict</code></td>
+        <td><code>POST</code></td>
+        <td>Multipart form-data with <code>file</code> (JPG, PNG, WEBP). Returns predicted category, confidence %, and recycling guidance.</td>
+      </tr>
+      <tr>
+        <td><code>/health</code></td>
+        <td><code>GET</code></td>
+        <td>Returns server status and verification of loaded ML backbones (EfficientNet, MobileNet).</td>
+      </tr>
+      <tr>
+        <td><code>/classes</code></td>
+        <td><code>GET</code></td>
+        <td>Returns full metadata, safety tips, reuse routes, and icons for all 6 categories.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>7. Common Troubleshooting</h2>
+  <ul>
+    <li><strong>Port 5000 Already in Use:</strong> Kill lingering Python processes in PowerShell: <code>Get-Process python | Stop-Process -Force</code></li>
+    <li><strong>"python" not recognized:</strong> Ensure Python was added to system PATH during installation, or invoke using <code>py</code> or the full path.</li>
+    <li><strong>Node.js packages missing:</strong> Run <code>npm install</code> inside the <code>frontend_upload/frontend</code> directory.</li>
+  </ul>
+
+  <div class="footer">
+    E-Waste Classification & Recycling Recommendation System · Prepared for Academic Project Presentation & Peer Evaluation
+  </div>
+
+</body>
+</html>

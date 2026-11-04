@@ -1,0 +1,292 @@
+{
+  "total_ewaste_tested": 180,
+  "total_ewaste_correct": 180,
+  "ewaste_accuracy": 100.0,
+  "total_ood_tested": 18,
+  "total_ood_rejected": 18,
+  "ood_rejection_accuracy": 100.0,
+  "false_positive_rate_on_non_ewaste": 0.0,
+  "classification_report": {
+    "battery": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "charger_cable": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "circuit_board": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "laptop": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "mobile_phone": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "monitor_tv": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 30.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      30,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      30,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      30,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      30,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      30,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      30
+    ]
+  ],
+  "ood_details": [
+    {
+      "id": "OOD-01",
+      "name": "shoe_waste.jpg",
+      "type": "Footwear",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Footwear & Shoes (Shoe)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-02",
+      "name": "running_sneaker.png",
+      "type": "Footwear",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Footwear & Shoes (Sneaker)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-03",
+      "name": "plastic_chair.jpg",
+      "type": "Furniture",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Chair)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-04",
+      "name": "wooden_table.jpg",
+      "type": "Furniture",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Table)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-05",
+      "name": "banana_fruit.jpg",
+      "type": "Food / Organic",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Stationery & Writing (Envelope)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-06",
+      "name": "fresh_apple.jpg",
+      "type": "Food / Organic",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Stationery & Writing (Binder)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-07",
+      "name": "book_novel.jpg",
+      "type": "Stationery / Paper",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Stationery & Writing (Envelope)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-08",
+      "name": "ballpoint_pen.jpg",
+      "type": "Stationery / Writing",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Plain Background (No Object Detected)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-09",
+      "name": "cotton_tshirt.jpg",
+      "type": "Clothing / Apparel",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Parachute)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-10",
+      "name": "denim_jeans.jpg",
+      "type": "Clothing / Apparel",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Jellyfish)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-11",
+      "name": "house_plant.jpg",
+      "type": "Plants / Nature",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Plant)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-12",
+      "name": "garden_flower.jpg",
+      "type": "Plants / Nature",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Stationery & Writing (Binder)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-13",
+      "name": "water_bottle.jpg",
+      "type": "Household Plastic",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Stationery & Writing (Envelope)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-14",
+      "name": "ceramic_mug.jpg",
+      "type": "Household Ceramic",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Parachute)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-15",
+      "name": "white_wall_blank.jpg",
+      "type": "Plain Background",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Plain Background (No Object Detected)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-16",
+      "name": "grey_sheet_blank.jpg",
+      "type": "Plain Background",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Plain Background (No Object Detected)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-17",
+      "name": "pet_dog.jpg",
+      "type": "Animal",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Non-Electronic Item (Dog)",
+      "correctly_rejected": true
+    },
+    {
+      "id": "OOD-18",
+      "name": "bicycle.jpg",
+      "type": "Vehicle / Transport",
+      "is_ewaste": false,
+      "predicted_class": "not_ewaste",
+      "confidence": 91.0,
+      "detected_object": "Plain Background (No Object Detected)",
+      "correctly_rejected": true
+    }
+  ]
+}

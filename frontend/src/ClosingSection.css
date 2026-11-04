@@ -1,0 +1,504 @@
+
+/* ECOSORT AI — CLOSING SECTION */
+
+
+.eco-ending,
+.eco-ending * {
+  box-sizing: border-box;
+}
+
+.eco-ending {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin: 0;
+  padding: 0 6%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 78% 48%,
+      rgba(91, 150, 66, 0.15),
+      transparent 38%
+    ),
+    #0b1711;
+  color: #f5f8f3;
+  font-family: inherit;
+}
+
+.eco-ending-inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Top brand bar */
+
+.eco-ending-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(220, 242, 220, 0.14);
+}
+
+.eco-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: #f5f8f3 !important;
+  text-decoration: none;
+}
+
+.eco-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #c3f47c;
+  color: #13251a;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.eco-brand-name {
+  color: #f5f8f3;
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.eco-brand-name > span,
+.eco-ending-bottom strong span {
+  color: #c3f47c;
+}
+
+.eco-brand-name small {
+  display: block;
+  margin-top: 5px;
+  color: #a7b9aa;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
+
+.eco-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #c1d0c2;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1.4px;
+}
+
+.eco-status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #c3f47c;
+  box-shadow: 0 0 14px rgba(195, 244, 124, 0.45);
+}
+
+/* Main two-column layout */
+
+.eco-ending-main {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 48px;
+  padding: 64px 0 70px;
+}
+
+.eco-ending-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.eco-kicker {
+  margin-bottom: 22px;
+  color: #c3f47c;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  line-height: 1.7;
+}
+
+.eco-ending-copy h2 {
+  margin: 0;
+  color: #f6faf4 !important;
+  font-size: clamp(46px, 5.2vw, 76px);
+  font-weight: 750;
+  letter-spacing: -3px;
+  line-height: 1.03;
+}
+
+.eco-ending-copy h2 span {
+  color: #c3f47c !important;
+}
+
+.eco-ending-description {
+  max-width: 520px;
+  margin: 24px 0 30px;
+  color: #c5d2c7 !important;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* CTA */
+
+.eco-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 58px;
+  padding: 0 25px;
+  border: 1px solid #c3f47c;
+  border-radius: 12px;
+  background: #c3f47c;
+  color: #14251a !important;
+  font-size: 15px;
+  font-weight: 750;
+  text-decoration: none !important;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.eco-primary-button span {
+  font-size: 22px;
+}
+
+.eco-primary-button:hover {
+  transform: translateY(-3px);
+  background: #d6ffa0;
+  box-shadow: 0 12px 35px rgba(195, 244, 124, 0.15);
+}
+
+.eco-ending-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: #a9bcad;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.eco-ending-note > span {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  border: 1px solid rgba(195, 244, 124, 0.45);
+  border-radius: 50%;
+  color: #c3f47c;
+}
+
+/* Illustration panel */
+
+.eco-ending-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 390px;
+  overflow: hidden;
+  border: 1px solid rgba(209, 240, 206, 0.13);
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(130, 191, 89, 0.14),
+      transparent 55%
+    ),
+    linear-gradient(145deg, #14281b, #0e1b13);
+}
+
+.eco-visual-orbit {
+  position: absolute;
+  width: 255px;
+  height: 255px;
+  border: 1px solid rgba(195, 244, 124, 0.22);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  transform: scaleX(1.45) rotate(-28deg);
+}
+
+.orbit-two {
+  transform: scaleX(0.76) rotate(35deg);
+}
+
+.eco-visual-center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 158px;
+  height: 158px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 38px;
+  background: linear-gradient(145deg, #d5ff9b, #a2df66);
+  color: #14251a;
+  box-shadow: 0 0 70px rgba(195, 244, 124, 0.13);
+  transform: rotate(-7deg);
+}
+
+.eco-visual-center > span {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.eco-visual-center small {
+  margin-top: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.eco-float-card {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 160px;
+  padding: 13px;
+  border: 1px solid rgba(222, 244, 220, 0.15);
+  border-radius: 15px;
+  background: rgba(20, 42, 28, 0.96);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.eco-float-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: rgba(195, 244, 124, 0.12);
+  color: #c3f47c;
+  font-size: 25px;
+}
+
+.eco-float-card strong {
+  display: block;
+  color: #f5f8f3;
+  font-size: 13px;
+}
+
+.eco-float-card small {
+  display: block;
+  margin-top: 4px;
+  color: #a9bcad;
+  font-size: 10px;
+}
+
+.float-phone {
+  top: 12%;
+  left: 5%;
+  transform: rotate(-5deg);
+}
+
+.float-leaf {
+  top: 12%;
+  right: 5%;
+  transform: rotate(4deg);
+}
+
+.float-recycle {
+  right: 5%;
+  bottom: 10%;
+  transform: rotate(-4deg);
+}
+
+.eco-decoration {
+  position: absolute;
+  color: #c3f47c;
+}
+
+.deco-one {
+  top: 38%;
+  right: 15%;
+  font-size: 22px;
+}
+
+.deco-two {
+  bottom: 20%;
+  left: 14%;
+  font-size: 18px;
+}
+
+/* Bottom bar */
+
+.eco-ending-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0 30px;
+  border-top: 1px solid rgba(220, 242, 220, 0.14);
+}
+
+.eco-ending-bottom strong {
+  color: #f5f8f3;
+  font-size: 14px;
+}
+
+.eco-ending-bottom p {
+  margin: 6px 0 0;
+  color: #a9bcad !important;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.eco-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #c3f47c !important;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none !important;
+}
+
+.eco-back-top span {
+  font-size: 19px;
+}
+
+/* Responsive tablet */
+
+@media (max-width: 900px) {
+  .eco-ending {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .eco-ending-main {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 25px;
+    padding: 48px 0;
+  }
+
+  .eco-ending-copy h2 {
+    font-size: clamp(42px, 5.5vw, 58px);
+    letter-spacing: -2px;
+  }
+
+  .eco-ending-visual {
+    min-height: 320px;
+  }
+
+  .eco-float-card {
+    min-width: 125px;
+    padding: 9px;
+    gap: 7px;
+  }
+
+  .eco-float-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 21px;
+  }
+
+  .eco-visual-center {
+    width: 120px;
+    height: 120px;
+  }
+
+  .eco-visual-center > span {
+    font-size: 55px;
+  }
+
+  .eco-visual-orbit {
+    width: 195px;
+    height: 195px;
+  }
+}
+
+/* Responsive mobile */
+
+@media (max-width: 640px) {
+  .eco-ending {
+    padding: 0 20px;
+  }
+
+  .eco-ending-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding: 25px 0;
+  }
+
+  .eco-status {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .eco-ending-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 42px 0;
+  }
+
+  .eco-ending-copy h2 {
+    font-size: clamp(42px, 11vw, 58px);
+    letter-spacing: -1.8px;
+  }
+
+  .eco-ending-description {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .eco-primary-button {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 15px;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .eco-ending-visual {
+    min-height: 310px;
+    border-radius: 22px;
+  }
+
+  .eco-float-card {
+    min-width: 122px;
+  }
+
+  .float-phone {
+    left: 3%;
+  }
+
+  .float-leaf,
+  .float-recycle {
+    right: 3%;
+  }
+
+  .eco-ending-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eco-ending * {
+    transition: none !important;
+  }
+}
